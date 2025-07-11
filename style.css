@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -40,11 +41,20 @@ body {
   flex-direction: column;
 }
 
-.login-section input {
+.login-section input,
+.login-section button {
   padding: 12px;
-  margin-bottom: 15px;
   border: none;
   border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.login-section button {
+  background-color: #1d75e5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .login-section a {
@@ -55,31 +65,19 @@ body {
   text-decoration: none;
 }
 
-.login-section button {
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  background-color: #1d75e5;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-}
-
 .login-section .divider {
   text-align: center;
   margin: 10px 0;
   font-size: 14px;
   opacity: 0.7;
 }
-#google {
-  background-color:#002062;
-}
-#facebook {
-  background-color:#002062;
-}
-#apple {
-  background-color:#002062;
+
+#google:hover,
+#facebook:hover,
+#apple:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+  transition: 0.3s ease;
 }
 
 .bottom-text {
@@ -103,22 +101,8 @@ body {
   object-fit: cover;
 }
 
-/* 📱 Responsive Media Query */
 @media screen and (max-width: 768px) {
   .image-section {
     display: none;
   }
-
-  .container {
-    width: 95%;
-    flex-direction: column;
-    border-radius: 0;
-    box-shadow: none;
-  }
-
-  .login-section {
-    width: 100%;
-    padding: 20px;
-  }
 }
-
